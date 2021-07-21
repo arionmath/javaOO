@@ -10,16 +10,16 @@ public class Clientes implements Comparator<Clientes>{
 	private List<ContaBancaria> conta;
 	
 	
-	public Clientes(String nome,int conta){
+	public Clientes(String nome){
 		this.nome=nome;
 		this.conta=new ArrayList<ContaBancaria>();
-		this.conta.add(	new	ContaBancaria(conta)	);
+		this.conta.add(	new	ContaBancaria(1)	);
 	}
 	
-	public Clientes(String nome,int conta, double deposito){
+	public Clientes(String nome, double deposito){
 		this.nome=nome;
 		this.conta=new ArrayList<ContaBancaria>();
-		this.conta.add(	new	ContaBancaria(conta,deposito)	);
+		this.conta.add(	new	ContaBancaria(1,deposito)	);
 		
 	}
 	
@@ -48,7 +48,7 @@ public class Clientes implements Comparator<Clientes>{
 	}
 	
 	public void novaConta() {
-		conta.add( new ContaBancaria(conta.size()));
+		conta.add( new ContaBancaria(conta.size()+1));
 	}
 	
 	public void depositarEmconta(double valor,int codConta) {

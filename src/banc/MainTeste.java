@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 import aplicacao.Decisao;
 
-public class Main {
+public class MainTeste {
 
 	public static void main(String[] args) {
 		System.out.println("___BANCO___");
@@ -21,7 +21,7 @@ public class Main {
 		
 		
 
-		//Tenho uma lista povoada Agora vou testar os métodos do pacote decisao 
+		//Tenho uma lista povoada Agora vou testar os mï¿½todos do pacote decisao 
 		
 		System.out.println("Tamanho: "+listaClientes.size());
 		/*/for(Clientes c : listaClientes)
