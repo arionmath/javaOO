@@ -54,14 +54,14 @@ public abstract class Decisao {
 
 		if (decisao == 's' || decisao == 'S') {
 			String nome;
-			int cod;
+			String cod;
 			double entrada;
 			System.out.println("Digite o nome completo ");
 			sc.nextLine();
 			nome = sc.nextLine();
 			System.out.println("Digite o cpf somente numeros + 0 no final");
 			// A conta vai ser o CPF + um digito esse digito ser� o numero da conta
-			cod = sc.nextInt();
+			cod = sc.next();
 			System.out.println("Digite o valor de entrada");
 			entrada = sc.nextDouble();
 
@@ -71,12 +71,12 @@ public abstract class Decisao {
 
 		} else {
 			String nome;
-			int cod;
+			String cod;
 			System.out.println("Digite o nome completo ");
 			sc.nextLine();
 			nome = sc.nextLine();
-			System.out.println("Digite o cpf somente numeros + 0 no final");
-			cod = sc.nextInt();
+			System.out.println("Digite o cpf somente numeros");
+			cod = sc.next();
 
 			Clientes a = new Clientes(nome, cod);
 

@@ -7,16 +7,19 @@ import java.util.List;
 public class Clientes implements Comparator<Clientes>{
 	
 	private String nome;
+	private String cpf;
 	private List<ContaBancaria> conta;
 	
 	
-	public Clientes(String nome){
+	public Clientes(String nome,String cpf){
+		this.setCpf(cpf);
 		this.nome=nome;
 		this.conta=new ArrayList<ContaBancaria>();
 		this.conta.add(	new	ContaBancaria(1)	);
 	}
 	
-	public Clientes(String nome, double deposito){
+	public Clientes(String nome,String cpf, double deposito){
+		this.setCpf(cpf);
 		this.nome=nome;
 		this.conta=new ArrayList<ContaBancaria>();
 		this.conta.add(	new	ContaBancaria(1,deposito)	);
@@ -41,6 +44,8 @@ public class Clientes implements Comparator<Clientes>{
 	public void statusCliente() {
 		System.out.println(	"\nNOME----------"
 							+ nome
+							+ "\nCPF---------"
+							+ cpf
 							+"\nQTD CONTAS---"
 							+ conta.size());
 	conta.stream().forEach(System.out::println);
@@ -75,6 +80,14 @@ public class Clientes implements Comparator<Clientes>{
 	public int compare(Clientes o1,String nome) {
 		// TODO Auto-generated method stub
 		return o1.getNome().compareTo(nome);
+	}
+
+	public String getCpf() {
+		return cpf;
+	}
+
+	public void setCpf(String cpf) {
+		this.cpf = cpf;
 	}
 
 }

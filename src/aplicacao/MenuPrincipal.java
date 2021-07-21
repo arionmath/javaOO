@@ -12,12 +12,12 @@ public class MenuPrincipal {
 		Scanner sc = new Scanner(System.in);
 		ArrayList<Clientes> listaClientes = new ArrayList<Clientes>();
 		
-		Clientes arion =  new Clientes("Arion", 0) ;
+		Clientes arion =  new Clientes("Arion", "123") ;
 		listaClientes.add(0, arion );
-		Clientes arion2 =  new Clientes("Mathias", 0) ;
+		Clientes arion2 =  new Clientes("Mathias", "321") ;
 		listaClientes.add(1, arion2 );
-		listaClientes.add( new Clientes("Farias",0,1500) );
-		listaClientes.add( new Clientes("Martines", 0,3000) );
+		listaClientes.add( new Clientes("Farias","635",1500) );
+		listaClientes.add( new Clientes("Martines", "875",3000) );
 		
 		int i = 1;
 		
@@ -57,7 +57,7 @@ public class MenuPrincipal {
 			
 			Decisao.adicionar(sc, listaClientes);			
 			
-			System.out.println("Operação concluida, cliente foi cadastrado\n");
+			System.out.println("Operaï¿½ï¿½o concluida, cliente foi cadastrado\n");
 			
 		
 			break;
@@ -67,7 +67,7 @@ public class MenuPrincipal {
 		case 2:
 			try {
 				Decisao.Deposito(sc,listaClientes);
-				System.out.println("Operação concluida");
+				System.out.println("Operaï¿½ï¿½o concluida");
 			} catch (Exception e1) {
 				// TODO Auto-generated catch block
 				e1.printStackTrace();
@@ -76,7 +76,7 @@ public class MenuPrincipal {
 			break;
 			
 		case 3:
-			//PRECISO ACHAR UM CLIENTE E ENTAO CRIAR UMA NOVA CONTA BANCÁRIA PARA ELE
+			//PRECISO ACHAR UM CLIENTE E ENTAO CRIAR UMA NOVA CONTA BANCï¿½RIA PARA ELE
 			
 			/*TEM ERRO Exception in thread "main" java.lang.NullPointerException
 			at aplicacao.Decisao.novaConta(Decisao.java:25)
@@ -85,7 +85,7 @@ public class MenuPrincipal {
 			at aplicacao.MenuPrincipal.main(MenuPrincipal.java:23)*/
 			try {
 				Decisao.novaConta(sc, listaClientes);
-				System.out.println("Operação concluida");
+				System.out.println("Operaï¿½ï¿½o concluida");
 			} catch (Exception e1) {
 				// TODO Auto-generated catch block
 				e1.printStackTrace();
@@ -97,7 +97,7 @@ public class MenuPrincipal {
 			
 			try{ 
 				Decisao.sacar(sc,listaClientes);
-				System.out.println("Operação concluida");
+				System.out.println("Operaï¿½ï¿½o concluida");
 				}
 			catch(Throwable e) {e.printStackTrace();for(int i=0;i<1000000000;i++) i++;}
 				
@@ -107,7 +107,7 @@ public class MenuPrincipal {
 			
 		case 5:
 			Decisao.mostrarTudo(listaClientes);
-			System.out.println("Operação concluida");
+			System.out.println("Operaï¿½ï¿½o concluida");
 			break;
 			
 		default:

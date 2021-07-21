@@ -12,12 +12,12 @@ public class MainTeste {
 		Scanner sc = new Scanner(System.in);
 		ArrayList<Clientes> listaClientes = new ArrayList<Clientes>();
 		
-		Clientes arion =  new Clientes("Arion", 0) ;
+		Clientes arion =  new Clientes("Arion","1") ;
 		listaClientes.add(0, arion );
-		Clientes arion2 =  new Clientes("Mathias", 0) ;
+		Clientes arion2 =  new Clientes("Mathias", "2") ;
 		listaClientes.add(1, arion2 );
-		listaClientes.add( new Clientes("Farias",0,1500) );
-		listaClientes.add( new Clientes("Martines", 0,3000) );
+		listaClientes.add( new Clientes("Farias","3",1500) );
+		listaClientes.add( new Clientes("Martines", "4",3000) );
 		
 		
 
