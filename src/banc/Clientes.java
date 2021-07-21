@@ -58,14 +58,14 @@ public class Clientes implements Comparator<Clientes>{
 	
 	public void depositarEmconta(double valor,int codConta) {
 		
-		conta.get(codConta).deposito(valor);
+		conta.get(codConta-1).deposito(valor);
 		
 		//statusCliente();
 		
 	}
 	public void sacarEmconta(double valor,int codConta) {
 		
-		conta.get(codConta).saque(valor);
+		conta.get(codConta-1).saque(valor);
 		//statusCliente();
 		
 	}
